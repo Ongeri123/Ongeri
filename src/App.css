@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0a0f;
+  --color-surface: #111118;
+  --color-surface2: #1a1a26;
+  --color-accent: #7fffb2;
+  --color-coral: #ff6b6b;
+  --color-periwinkle: #6b8cff;
+  --color-amber: #ffc864;
+  --color-text-main: #e8e8f0;
+  --color-muted: #6b6b85;
+  --font-family-display: Syne, sans-serif;
+  --font-family-mono: "DM Mono", monospace;
+  --font-family-body: Lora, serif;
+}
+
+:root {
+  --border: rgba(255, 255, 255, 0.07);
+  background-color: black;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background-color: black;
+  padding: 2rem;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  min-height: 100vh;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 60px 60px;
+  -webkit-mask-image: radial-gradient(
+    ellipse 80% 80% at 50% 50%,
+    black 40%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 80% 80% at 50% 50%,
+    black 40%,
+    transparent 100%
+  );
+  z-index: 0;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
