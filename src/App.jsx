@@ -1,10 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Hero from "./components/Hero";
+import Nav from "./components/Nav";
 import "./App.css";
 
 function App() {
   return (
     <BrowserRouter>
+      <Nav />
       <Routes>
         <Route path="/" element={<Hero />} />
       </Routes>
