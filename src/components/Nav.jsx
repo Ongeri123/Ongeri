@@ -50,12 +50,12 @@ const Nav = () => {
             <Link to="/about" onClick={() => setIsOpen(false)}>ABOUT</Link>
           </li>
           <li>
-            <button className="bg-accent border rounded-lg px-4 py-2 w-full">Hire Me <FontAwesomeIcon icon={faArrowRight} /></button>
+            <button className="bg-accent border rounded-lg px-4 py-2 w-full cursor-pointer">Hire Me <FontAwesomeIcon icon={faArrowRight} /></button>
           </li>
         </ul>
       )}
 
-      <button className="hidden md:block hire-button bg-accent border rounded-lg px-4 py-2 mr-4">Hire Me <FontAwesomeIcon icon={faArrowRight} /></button>
+      <button className="hidden md:block hire-button bg-accent border rounded-lg px-4 py-2 mr-4 cursor-pointer">Hire Me <FontAwesomeIcon icon={faArrowRight} /></button>
     </nav>
   );
 };
