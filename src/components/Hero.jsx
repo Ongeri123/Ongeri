@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInfinity} from '@fortawesome/free-solid-svg-icons'
 
 const Hero = () => {
     return (
@@ -16,7 +18,7 @@ const Hero = () => {
           Newton Orina
         </h1>
         <p className="text-muted italic font-body text-lg max-w-2xl">
-          Fullstack developer building AI-powered products that solve real
+          Fullstack developer building <span className="text-accent not-italic text-white font-bold">AI-powered products</span> that solve real
           problems from intelligent document systems to real-time collaborative
           tools.
         </p>
@@ -24,7 +26,7 @@ const Hero = () => {
           <div className="bg-accent border rounded-lg px-4 py-2">
             <button className="cta-button cursor-pointer">View Projects</button>
           </div>
-          <div className="border border-text-main rounded-lg px-4 py-2">
+          <div className="border border-white/10 rounded-lg px-4 py-2 hover:border-accent transition-colors">
             <button className="cta-button text-text-main cursor-pointer">
               Download CV
             </button>
@@ -53,6 +55,20 @@ const Hero = () => {
             {tech}
           </div>
         ))}
+          <div className="col-span-2 mt-4 flex border-t border-white/10 pt-4 gap-10 justify-start">
+            <div className="flex flex-col items-center">
+              <h1 className="text-accent font-extrabold text-2xl">3+</h1>
+              <p className="text-muted">AI Projects</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <h1 className="text-accent  font-extrabold text-2xl">4</h1>
+              <p className="text-muted">Live Apps</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <h1 className="text-accent  font-extrabold text-2xl"><FontAwesomeIcon icon={faInfinity} /></h1>
+              <p className="text-muted">Coffee</p>
+            </div>
+          </div>
       </div>
     </div>
   );
