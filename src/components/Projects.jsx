@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faPen, faCode } from "@fortawesome/free-solid-svg-icons";  
 
 const ProjectCard = ({ project }) => (
-  <div className="mt-12 p-4 md:p-6 border border-white/10 rounded-lg w-full max-w-4xl">
+  <div className="mt-12 p-4 md:p-6 border border-white/10 rounded-lg w-full max-w-6xl">
     <div className="flex flex-col md:flex-row md:justify-between gap-4">
       <div className="flex flex-col gap-2 flex-1">
         <p className="text-muted text-sm pb-4">{project.label}</p>
@@ -136,8 +136,8 @@ const Projects = () => {
   ];
 
   return (
-    <div className="pt-20 px-4 flex justify-center pb-12">
-      <div className="flex flex-col items-start">
+    <div className="mt-10 pt-20 px-4 flex justify-center pb-12">
+      <div className="flex flex-col items-start w-full max-w-6xl">
         <p className="text-accent font-mono text-sm tracking-wide mb-2">02 - SELECTED WORK <span style={{borderBottom: 'solid #7fffb2', display: 'inline-block', width: '80px', verticalAlign: 'middle', marginLeft: '8px'}}></span></p>
         <h2 className="text-4xl text-white font-bold mb-8">Projects That<br/> Actually Ship</h2>
         <p className="text-muted italic font-body">Each project solves a real problem, uses a production-grade stack, and is live and deployable.</p>
