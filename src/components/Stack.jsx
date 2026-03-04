@@ -53,6 +53,11 @@ const Stack = () => {
                     </ul>
                 </div>
             </div>
+            <div className="flex justify-start gap-4 w-full max-w-6xl mt-4">
+                <p className="text-muted text-xs flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-accent"></span>Daily use</p>
+                <p className="text-muted text-xs flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-periwinkle"></span>Proficient</p>
+                <p className="text-muted text-xs flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-muted"></span>Familiar / learning</p>
+            </div>
         </div>
     )
  ;
