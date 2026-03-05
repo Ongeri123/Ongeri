@@ -1,9 +1,9 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInfinity} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInfinity } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {
-    return (
+  return (
     <div className="hero grid grid-cols-1 lg:grid-cols-2 gap-10 lg:items-center">
       <div className="p-0 ml-4 lg:ml-20">
         <div
@@ -18,9 +18,12 @@ const Hero = () => {
           Newton Orina
         </h1>
         <p className="text-muted italic font-body text-lg max-w-2xl">
-          Fullstack developer building <span className="text-accent not-italic text-white font-bold">AI-powered products</span> that solve real
-          problems from intelligent document systems to real-time collaborative
-          tools.
+          Fullstack developer building{" "}
+          <span className="text-accent not-italic text-white font-bold">
+            AI-powered products
+          </span>{" "}
+          that solve real problems from intelligent document systems to
+          real-time collaborative tools.
         </p>
         <div className="flex space-x-2 mt-6">
           <div className="bg-accent border rounded-lg px-4 py-2">
@@ -33,10 +36,12 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      
+
       <div className="bg-surface grid grid-cols-2 grid-rows-4 gap-4 w-full lg:w-1/2 border border-white/10 p-4 rounded-lg mr-4 lg:mr-20 lg:ml-auto">
         <div className="col-span-2">
-          <h1 className="text-muted text-base font-display font-light m-2">// Current Stack</h1>
+          <h1 className="text-muted text-base font-display font-light m-2">
+            // Current Stack
+          </h1>
         </div>
         {[
           "React",
@@ -55,20 +60,22 @@ const Hero = () => {
             {tech}
           </div>
         ))}
-          <div className="col-span-2 mt-4 flex border-t border-white/10 pt-4 gap-10 justify-start">
-            <div className="flex flex-col items-center">
-              <h1 className="text-accent font-extrabold text-2xl">3+</h1>
-              <p className="text-muted">AI Projects</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <h1 className="text-accent  font-extrabold text-2xl">4</h1>
-              <p className="text-muted">Live Apps</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <h1 className="text-accent  font-extrabold text-2xl"><FontAwesomeIcon icon={faInfinity} /></h1>
-              <p className="text-muted">Coffee</p>
-            </div>
+        <div className="col-span-2 mt-4 flex border-t border-white/10 pt-4 gap-10 justify-start">
+          <div className="flex flex-col items-center">
+            <h1 className="text-accent font-extrabold text-2xl">3+</h1>
+            <p className="text-muted">AI Projects</p>
           </div>
+          <div className="flex flex-col items-center">
+            <h1 className="text-accent  font-extrabold text-2xl">4</h1>
+            <p className="text-muted">Live Apps</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <h1 className="text-accent  font-extrabold text-2xl">
+              <FontAwesomeIcon icon={faInfinity} />
+            </h1>
+            <p className="text-muted">Coffee</p>
+          </div>
+        </div>
       </div>
     </div>
   );

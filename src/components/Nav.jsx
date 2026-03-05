@@ -1,17 +1,21 @@
-import React, { useState } from "react"; 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight, faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArrowRight,
+  faBars,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-      <nav className="flex items-center justify-between fixed top-0 left-0 right-0 z-50 pt-4 pb-4 bg-black border-b border-white/10">
+    <nav className="flex items-center justify-between fixed top-0 left-0 right-0 z-50 pt-4 pb-4 bg-black border-b border-white/10">
       <h1 className="text-accent ml-4">// ONGERI</h1>
-      
+
       {/* Hamburger Menu Button */}
-      <button 
+      <button
         className="md:hidden mr-4 text-accent text-2xl"
         onClick={() => setIsOpen(!isOpen)}
       >
@@ -38,24 +42,36 @@ const Nav = () => {
       {isOpen && (
         <ul className="md:hidden absolute top-full left-0 right-0 bg-black border-b border-white/10 flex flex-col gap-4 p-4 text-muted italic font-body">
           <li className="hover:text-accent transition-colors">
-            <Link to="/projects" onClick={() => setIsOpen(false)}>PROJECTS</Link>
+            <Link to="/projects" onClick={() => setIsOpen(false)}>
+              PROJECTS
+            </Link>
           </li>
           <li className="hover:text-accent transition-colors">
-            <Link to="/stack" onClick={() => setIsOpen(false)}>STACK</Link>
+            <Link to="/stack" onClick={() => setIsOpen(false)}>
+              STACK
+            </Link>
           </li>
           <li className="hover:text-accent transition-colors">
-            <Link to="/case-studies" onClick={() => setIsOpen(false)}>CASE STUDIES</Link>
+            <Link to="/case-studies" onClick={() => setIsOpen(false)}>
+              CASE STUDIES
+            </Link>
           </li>
           <li className="hover:text-accent transition-colors">
-            <Link to="/about" onClick={() => setIsOpen(false)}>ABOUT</Link>
+            <Link to="/about" onClick={() => setIsOpen(false)}>
+              ABOUT
+            </Link>
           </li>
           <li>
-            <button className="bg-accent border rounded-lg px-4 py-2 w-full cursor-pointer">Hire Me <FontAwesomeIcon icon={faArrowRight} /></button>
+            <button className="bg-accent border rounded-lg px-4 py-2 w-full cursor-pointer">
+              Hire Me <FontAwesomeIcon icon={faArrowRight} />
+            </button>
           </li>
         </ul>
       )}
 
-      <button className="hidden md:block hire-button bg-accent border rounded-lg px-4 py-2 mr-4 cursor-pointer">Hire Me <FontAwesomeIcon icon={faArrowRight} /></button>
+      <button className="hidden md:block hire-button bg-accent border rounded-lg px-4 py-2 mr-4 cursor-pointer">
+        Hire Me <FontAwesomeIcon icon={faArrowRight} />
+      </button>
     </nav>
   );
 };

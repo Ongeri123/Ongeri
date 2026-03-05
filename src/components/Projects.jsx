@@ -1,6 +1,6 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faPen, faCode } from "@fortawesome/free-solid-svg-icons";  
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight, faPen, faCode } from "@fortawesome/free-solid-svg-icons";
 
 const ProjectCard = ({ project }) => (
   <div className="mt-12 p-4 md:p-6 border border-white/10 rounded-lg w-full max-w-6xl">
@@ -11,27 +11,52 @@ const ProjectCard = ({ project }) => (
         <p className="text-muted italic">{project.description}</p>
       </div>
       <div className="flex flex-col gap-4 md:ml-20">
-        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="text-muted text-xs border border-muted p-2 rounded-md flex items-center gap-2 hover:border-accent transition-colors whitespace-nowrap">
-          Live Demo <FontAwesomeIcon icon={faArrowRight} className="text-accent text-xs" />
+        <a
+          href={project.liveUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-muted text-xs border border-muted p-2 rounded-md flex items-center gap-2 hover:border-accent transition-colors whitespace-nowrap"
+        >
+          Live Demo{" "}
+          <FontAwesomeIcon
+            icon={faArrowRight}
+            className="text-accent text-xs"
+          />
         </a>
-        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="text-muted text-xs border border-muted p-2 rounded-md flex items-center gap-2 hover:border-accent transition-colors whitespace-nowrap">
-          GitHub <FontAwesomeIcon icon={faCode} className="text-accent text-xs" />
+        <a
+          href={project.githubUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-muted text-xs border border-muted p-2 rounded-md flex items-center gap-2 hover:border-accent transition-colors whitespace-nowrap"
+        >
+          GitHub{" "}
+          <FontAwesomeIcon icon={faCode} className="text-accent text-xs" />
         </a>
-        <a href={project.caseStudyUrl} target="_blank" rel="noopener noreferrer" className="text-muted text-xs border border-muted p-2 rounded-md flex items-center gap-2 hover:border-accent transition-colors whitespace-nowrap">
-          Case Study <FontAwesomeIcon icon={faPen} className="text-accent text-xs" />
+        <a
+          href={project.caseStudyUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-muted text-xs border border-muted p-2 rounded-md flex items-center gap-2 hover:border-accent transition-colors whitespace-nowrap"
+        >
+          Case Study{" "}
+          <FontAwesomeIcon icon={faPen} className="text-accent text-xs" />
         </a>
       </div>
     </div>
     <div className="flex flex-wrap gap-2 mt-4">
       {project.techStack.map((tech) => {
         const colorMap = {
-          'bg-accent': 'bg-accent/10 text-accent border-accent/20',
-          'bg-periwinkle': 'bg-periwinkle/10 text-periwinkle border-periwinkle/20',
-          'bg-coral': 'bg-coral/10 text-coral border-coral/20',
-          'bg-amber': 'bg-amber/10 text-amber border-amber/20'
+          "bg-accent": "bg-accent/10 text-accent border-accent/20",
+          "bg-periwinkle":
+            "bg-periwinkle/10 text-periwinkle border-periwinkle/20",
+          "bg-coral": "bg-coral/10 text-coral border-coral/20",
+          "bg-amber": "bg-amber/10 text-amber border-amber/20",
         };
         return (
-          <span key={tech.name} className={`${colorMap[tech.color]} border font-mono text-xs px-2 py-0.5 rounded-sm tracking-wide uppercase`}>
+          <span
+            key={tech.name}
+            className={`${colorMap[tech.color]} border font-mono text-xs px-2 py-0.5 rounded-sm tracking-wide uppercase`}
+          >
             {tech.name}
           </span>
         );
@@ -53,7 +78,8 @@ const Projects = () => {
     {
       label: "Project 01 - AI Integration + RAG",
       title: "DocuMind - AI Document Intelligence",
-      description: "Upload PDFs and contracts, then chat with them. Uses RAG pipeline with pgvector to retrieve context-aware answers, highlight source passages, and compare multiple documents.",
+      description:
+        "Upload PDFs and contracts, then chat with them. Uses RAG pipeline with pgvector to retrieve context-aware answers, highlight source passages, and compare multiple documents.",
       liveUrl: "https://documind.ongeri.com",
       githubUrl: "https://github.com/ongeri/documind",
       caseStudyUrl: "https://documind.ongeri.com",
@@ -74,7 +100,8 @@ const Projects = () => {
     {
       label: "Project 02 - Real-Time + WebSockets",
       title: "SyncBoard - Collaborative Whiteboard + AI",
-      description: "Real-time collaborative whiteboard where users draw, annotate, and invite an AI assistant to generate diagrams or explain concepts sketched on the canvas.",
+      description:
+        "Real-time collaborative whiteboard where users draw, annotate, and invite an AI assistant to generate diagrams or explain concepts sketched on the canvas.",
       liveUrl: "https://documind.ongeri.com",
       githubUrl: "https://github.com/ongeri/documind",
       caseStudyUrl: "https://documind.ongeri.com",
@@ -94,7 +121,8 @@ const Projects = () => {
     {
       label: "Project 03 - Data + Analytics",
       title: "DevPulse - GitHub Productivity Dashboard",
-      description: "Connects to GitHub OAuth to visualize commit patterns, PR velocity, language usage over time, with an AI coach that generates personalized weekly productivity insights.",
+      description:
+        "Connects to GitHub OAuth to visualize commit patterns, PR velocity, language usage over time, with an AI coach that generates personalized weekly productivity insights.",
       liveUrl: "https://documind.ongeri.com",
       githubUrl: "https://github.com/ongeri/documind",
       caseStudyUrl: "https://documind.ongeri.com",
@@ -114,7 +142,8 @@ const Projects = () => {
     {
       label: "Project 04 - Audio + AI Automation",
       title: "MeetingMind - AI Meeting Summarizer",
-      description: "Upload meeting audio or a raw transcript — MeetingMind transcribes it, summarizes key decisions, extracts action items, assigns them to participants, and tracks completion status end-to-end.",
+      description:
+        "Upload meeting audio or a raw transcript — MeetingMind transcribes it, summarizes key decisions, extracts action items, assigns them to participants, and tracks completion status end-to-end.",
       liveUrl: "https://documind.ongeri.com",
       githubUrl: "https://github.com/ongeri/documind",
       caseStudyUrl: "https://documind.ongeri.com",
@@ -138,15 +167,32 @@ const Projects = () => {
   return (
     <div className="mt-10 pt-20 px-4 flex justify-center pb-12">
       <div className="flex flex-col items-start w-full max-w-6xl">
-        <p className="text-accent font-mono text-sm tracking-wide mb-2">02 - SELECTED WORK <span style={{borderBottom: 'solid #7fffb2', display: 'inline-block', width: '80px', verticalAlign: 'middle', marginLeft: '8px'}}></span></p>
-        <h2 className="text-4xl text-white font-bold mb-8">Projects That<br/> Actually Ship</h2>
-        <p className="text-muted italic font-body">Each project solves a real problem, uses a production-grade stack, and is live and deployable.</p>
+        <p className="text-accent font-mono text-sm tracking-wide mb-2">
+          02 - SELECTED WORK{" "}
+          <span
+            style={{
+              borderBottom: "solid #7fffb2",
+              display: "inline-block",
+              width: "80px",
+              verticalAlign: "middle",
+              marginLeft: "8px",
+            }}
+          ></span>
+        </p>
+        <h2 className="text-4xl text-white font-bold mb-8">
+          Projects That
+          <br /> Actually Ship
+        </h2>
+        <p className="text-muted italic font-body">
+          Each project solves a real problem, uses a production-grade stack, and
+          is live and deployable.
+        </p>
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
-      </div> 
+      </div>
     </div>
   );
-}
+};
 
 export default Projects;
