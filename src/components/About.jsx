@@ -72,18 +72,18 @@ const About = () => {
             <div className="bg-surface border border-muted rounded-lg p-6 w-80">
                 <h2 className="text-muted text-xs pb-2">// &nbsp;LOOKING FOR</h2>
                 <ul className="text-text-main text-sm flex flex-col gap-2">
-                   <li>Fullstack or AI Engineer Role</li>
-                   <li>AI/LLM Integration role</li>
-                    <li>Remote or Nairobi</li>       
-                    <li>Open to contract work</li>   
+                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-accent"></span>{" "}Fullstack or AI Engineer Role</li>
+                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-accent"></span>{" "}AI/LLM Integration role</li>
+                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-periwinkle"></span>{" "}Remote or Nairobi</li>       
+                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-muted"></span>{" "}Open to contract work</li>   
                 </ul>      
             </div>
             <div className="bg-surface border border-muted rounded-lg p-6 w-80">
                 <h2 className="text-muted text-xs pb-2">// &nbsp;CURRENTLY LEARNING</h2>
                 <ul className="text-text-main text-sm flex flex-col gap-2">
-                   <li>LangGraph / Agents</li>
-                   <li>Docker + CI/CD</li>
-                   <li>TypeScript</li>       
+                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-periwinkle"></span>{" "}LangGraph / Agents</li>
+                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-periwinkle"></span>{" "}Docker + CI/CD</li>
+                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-muted"></span>{" "}TypeScript</li>       
                 </ul>       
             </div>      
         </div>
